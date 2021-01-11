@@ -1,3 +1,6 @@
+## To come back later:
+Segment Tree: https://leetcode.com/problems/create-sorted-array-through-instructions/solution/
+
 ### Binary Search
 
 ```
@@ -52,6 +55,38 @@ public Node bfs(Node start, Graph graph) {
   }
 }
 
+```
+### Other
+
+#### Check is Prime 
+Runtime is still O(N) but more optimized than checking 1 to N.
+High level:
+* less than 0 -> return false
+* if it's 2 -> return true
+* if it's odd -> return false
+* else for all odd number i from 3 -> sqrt(n):
+  * if n % i == 0 -> return false
+* Otherwise return true
+```
+public boolean isPrime(int n) {
+  if (n < 2) {
+    return false; //0,1 and negative is not considered prime
+  }
+  if (n == 2) {
+    return true;
+  }
+  
+  if (n % 2 == 0) {
+    return false;
+  }
+  
+  for (int n = 3; i <= Math.sqrt(n); i=i+2) {
+    if (n % i == 0) {
+      return false;
+    }
+  }
+  return false;
+}
 ```
 
 ### Data structures
