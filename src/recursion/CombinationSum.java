@@ -6,6 +6,10 @@ import java.util.List;
 /**
  * https://leetcode.com/problems/combination-sum
  * use a trick to avoid duplicates:
+ * - iterate through the nums and recursively
+ * - use a list to keep track of path so far.
+ * - Pass in result so we can add to result when remaining is 0
+ *
  * //example: [2,3,6,7], 7
  *
  * [], [2,3,6,7], 7
@@ -26,7 +30,7 @@ import java.util.List;
  *   -> [2,6], [6,7], -1 => return
  *   -> [2,7], [7], -2 => return
  * -> [3], ...
- *   
+ *
  *
  **/
 public class CombinationSum {
@@ -51,4 +55,10 @@ public class CombinationSum {
             current.remove(current.size() - 1);
         }
     }
+
+    public static void main(String[] args) {
+
+        System.out.println(Math.abs(Integer.MAX_VALUE + 1));
+    }
+
 }
