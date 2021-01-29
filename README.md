@@ -1,6 +1,11 @@
 ## To come back later:
 Segment Tree: https://leetcode.com/problems/create-sorted-array-through-instructions/solution/
 
+
+### High level notes:
+
+Be careful of int long auto conversion we have to mod with 1e9+7. That can mess up values
+
 ### Binary Search
 
 ```
